@@ -3,7 +3,7 @@ import smtplib
 import os
 
 MY_USERNAME = os.environ.get("MY_EMAIL")
-MY_PASSWORD = os.environ.get("MY_PASS")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
 # parameters = {
 #     "api_key" : "blabla",
 #     "lat" : -30.559483,
