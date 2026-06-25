@@ -36,11 +36,11 @@ will_rain = False
 for id in id_list_comprehension:
     if id < 700:
         will_rain = True
+msg = "Subject: Rain Alert \n\nMake sure to bring an umbrella with you today!"
 if will_rain:
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=MY_USERNAME,password=MY_PASSWORD)
         connection.sendmail(from_addr=MY_USERNAME,
                             to_addrs=MY_USERNAME,
-                            msg="Subject: Rain Alert \n\nMake sure to bring an umbrella with you today!")
-        msg= msg.encode("utf-8")
+                            msg=msg.encode("utf-8"))
