@@ -42,4 +42,5 @@ if will_rain:
         connection.login(user=MY_USERNAME,password=MY_PASSWORD)
         connection.sendmail(from_addr=MY_USERNAME,
                             to_addrs=MY_USERNAME,
-                            msg="Subject: Rain Alert \n\nMake sure to bring an umbrella with you today! ☔")
+                            msg="Subject: Rain Alert \n\nMake sure to bring an umbrella with you today!")
+        msg= msg.encode("utf-8")
